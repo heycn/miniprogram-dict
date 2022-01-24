@@ -1,23 +1,31 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+
+  <!-- 选择翻译的语言 -->
+  <view class="change">
+    <navigator url="/pages/change/change" hover-class="navigator-hover">
+      <text>到{{curLang.chs}}</text>
+      <text class="iconfont icon-down"></text>
+    </navigator>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <!-- 需要翻译的内容 -->
+  <view class="input-area">
+    <text class="iconfont icon-close" hidden="{{hideClearIcon}}" bindtap="onTapClose"></text>
+    <view class="textarea-wrap">
+      <textarea placeholder="请输入要翻译的文本" placeholder-style="color:#999" bindinput="onInput" bindconfirm="onConfirm" bindblur="onConfirm" value="{{query}}"></textarea>
+    </view>
+
+    <view class="text-area">
+      <view class="text-title">译文</view>
+      <view class="text-result" wx:for="{{result}}" wx:key="index">
+        <text selectable="true">{{item.dst}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 版权声明 -->
+  <view class="copyright">
+    <text>© 没有理想的人是很可怕的</text>
   </view>
 </view>
