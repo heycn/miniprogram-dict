@@ -34,7 +34,7 @@
 
 .item .iconfont {
   margin-left: auto;
-  color: #aaa;
+  color: #999;
 }
 
 .item:nth-child(2) .item-inner {

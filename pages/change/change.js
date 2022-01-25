@@ -1,8 +1,6 @@
 // change.js
 const util = require('../../utils/util.js')
-
 const app = getApp()
-
 Page({
   data: {
     curLang: {},
@@ -11,7 +9,7 @@ Page({
   onShow: function () {
     this.setData({ curLang: app.globalData.curLang })
   },
-  onTabItem: function (e) {
+  onTapItem: function (e) {
     let langObj = e.currentTarget.dataset
     wx.setStorageSync('language', langObj)
     this.setData({ curLang: langObj })
