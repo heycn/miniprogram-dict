@@ -18,7 +18,7 @@
   flex: 1;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 24rpx;
+  padding-bottom: 48rpx;
   font-size: 28rpx;
   color: #999;
 }
