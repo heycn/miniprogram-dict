@@ -1,6 +1,5 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-
   <!-- 选择翻译的语言 -->
   <view class="change">
     <navigator url="/pages/change/change" hover-class="navigator-hover">
@@ -8,14 +7,12 @@
       <text class="iconfont icon-down"></text>
     </navigator>
   </view>
-
   <!-- 需要翻译的内容 -->
   <view class="input-area">
     <text class="iconfont icon-close" hidden="{{hideClearIcon}}" bindtap="onTapClose"></text>
     <view class="textarea-wrap" style="width: 750rpx; height: 314rpx; display: block; box-sizing: border-box">
       <textarea placeholder="请输入要翻译的文本" placeholder-style="color:#999" bindinput="onInput" bindconfirm="onConfirm" bindblur="onConfirm" value="{{query}}"></textarea>
     </view>
-
     <view class="text-area">
       <view class="text-title">译文</view>
       <view class="text-result" wx:for="{{result}}" wx:key="index">
@@ -23,7 +20,6 @@
       </view>
     </view>
   </view>
-
   <!-- 版权声明 -->
   <view class="copyright">
     <text>© 没有理想的人是很可怕的</text>
