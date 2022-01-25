@@ -12,7 +12,7 @@
   <!-- 需要翻译的内容 -->
   <view class="input-area">
     <text class="iconfont icon-close" hidden="{{hideClearIcon}}" bindtap="onTapClose"></text>
-    <view class="textarea-wrap">
+    <view class="textarea-wrap" style="width: 750rpx; height: 314rpx; display: block; box-sizing: border-box">
       <textarea placeholder="请输入要翻译的文本" placeholder-style="color:#999" bindinput="onInput" bindconfirm="onConfirm" bindblur="onConfirm" value="{{query}}"></textarea>
     </view>
 

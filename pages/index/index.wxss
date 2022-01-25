@@ -1,7 +1,7 @@
 /**index.wxss**/
 
 .change {
-  color: #8995a1;
+  color: #999;
   font-size: 24rpx;
   padding: 20rpx 40rpx;
   display: flex;
@@ -9,11 +9,11 @@
 }
 
 .change .icon-right {
-  color: #888;
+  color: #999;
 }
 
 .change .icon-down {
-  color: #8995a1;
+  color: #999;
   font-size: 20rpx;
 }
 
@@ -23,7 +23,7 @@
 
 .textarea-wrap {
   background: #fff;
-  border-bottom: 1px solid #c7cee0;
+  border-bottom: 1px solid#dcdee2;
 }
 
 .input-area textarea {
