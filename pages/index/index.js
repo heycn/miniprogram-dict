@@ -1,4 +1,6 @@
 // index.js
+import { translate } from '../../utils/api.js'
+
 const app = getApp()
 
 Page({
@@ -10,8 +12,6 @@ Page({
   },
 
   onLoad: function (options) {
-    console.log('lonload..')
-    console.log(options)
     if (options.query) {
       this.setData({ query: options.query })
     }
