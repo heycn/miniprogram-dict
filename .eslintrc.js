@@ -3,6 +3,10 @@
  * Documentation: https://eslint.org/docs/user-guide/configuring/
  * Install the Eslint extension before using this feature.
  */
+{
+  "lazyCodeLoading": "requiredComponents"
+
+
 module.exports = {
   env: {
     es6: true,

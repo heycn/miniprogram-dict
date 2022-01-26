@@ -9,19 +9,12 @@ function translate(q, { from = 'auto', to = 'auto' } = { from: 'auto', to: 'auto
     let sign = md5(`${appid}${q}${salt}${key}`)
     wx.request({
       url: 'https://fanyi-api.baidu.com/api/trans/vip/translate',
-      data: {
-        q,
-        from,
-        to,
-        appid,
-        salt,
-        sign
-      },
+      data: { q, from, to, appid, salt, sign },
       success(res) {
         if (res.data && res.data.trans_result) {
           resolve(res.data)
         } else {
-          reject({ status: 'error', msg: '翻译失败' })
+          reject({ status: 'error', msg: '还用问吗？翻译失败了，我tm哪知道怎么失败，可能是我没充钱吧' })
           wx.showToast({
             title: '翻译失败',
             icon: 'none',
