@@ -1,6 +1,6 @@
 /**app.wxss**/
 
-@import"./assets/icon/icon.wxss";
+@import './assets/icon/icon.wxss';
 
 .container {
   padding: 0;
@@ -10,7 +10,7 @@
   flex-direction: column;
   box-sizing: border-box;
   font-size: 32rpx;
-  color: #333
+  color: #333;
 }
 
 .copyright {
